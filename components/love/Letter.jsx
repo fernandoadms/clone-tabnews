@@ -96,7 +96,11 @@ export default function Letter() {
       {paragraphs.map((text, index) => (
         <p 
           key={index} 
-          className={`${styles.paragraph} ${visibleParagraphs > index ? styles.paragraphVisible : ''}`}
+          className={`
+            ${styles.paragraph} 
+            ${visibleParagraphs > index ? styles.paragraphVisible : ''} 
+            ${text === "Você." ? styles.highlightWord : ''}
+          `}
         >
           {text}
         </p>
