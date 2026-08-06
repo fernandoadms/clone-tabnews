@@ -1,0 +1,208 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFFDFB 0%, #FFF6F8 50%, #FFF0F3 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.center {
+  text-align: center;
+  max-width: 600px;
+  animation: fadeIn 1.5s ease;
+}
+
+.heart {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 16px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.title {
+  font-family: 'Great Vibes', cursive;
+  color: #4d3e3e;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #5b4d4d;
+  margin-bottom: 32px;
+}
+
+.primaryButton {
+  background: #d87093;
+  color: white;
+  border: none;
+  padding: 16px 36px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: .25s;
+  font-size: 1.1rem;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(216, 112, 147, 0.3);
+}
+
+.letter {
+  max-width: 720px;
+  background: rgba(255,255,255,.72);
+  backdrop-filter: blur(8px);
+  padding: 56px 48px;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.08);
+  line-height: 2;
+  color: #4d3e3e;
+  position: relative;
+  border-top: 2px solid rgba(216, 112, 147, 0.2);
+  animation: fadeIn 2s ease;
+}
+
+.flower {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+}
+
+.letter h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 3rem;
+}
+
+.paragraph {
+  font-size: 1.3rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.paragraphVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.highlight {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.signature {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+  color: #d87093;
+}
+
+.author {
+  text-align: center;
+  opacity: .7;
+  font-style: italic;
+}
+
+/* === Etapas 3, 4 e 5: Câmera e Cápsula do Tempo === */
+.timeCapsule {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px dashed rgba(216, 112, 147, 0.3);
+  text-align: center;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #d87093;
+  border: 1px solid #d87093;
+  padding: 12px 32px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: .25s;
+  font-size: 1rem;
+  margin-top: 16px;
+}
+
+.secondaryButton:hover {
+  background: #d87093;
+  color: white;
+}
+
+.videoWrapper {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 24px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 4px solid white;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.videoWrapper video {
+  width: 100%;
+  display: block;
+  transform: scaleX(-1); /* Espelha a câmera como num celular */
+}
+
+.polaroid {
+  background: white;
+  padding: 16px 16px 48px 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transform: rotate(2deg);
+  transition: transform 0.4s;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg);
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+  border: 1px solid #f0f0f0;
+}
+
+.polaroidTitle {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #4d3e3e;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+.polaroidMeta {
+  font-size: 1rem;
+  color: #888;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width:768px){
+  .letter{
+    padding: 40px 24px;
+  }
+  .letter p, .paragraph{
+    font-size:1.15rem;
+  }
+}
